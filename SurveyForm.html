@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oxygen800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<html>
+
+<title>General Happiness Survey</title>
+
+<head>
+
+</head>
+<style>
+    #titleInset{
+    background: #5a816e;
+     margin:1vw 20vw;
+     justify-content: center;
+     padding: 1%;
+     border-radius: 3px;
+    }  
+ #title{
+    background: #c1baa0;
+    color: #3c3528;
+    border-radius: 30px;
+    padding: 3% ;
+    width: 10em;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: 3vh auto; 
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: .2em;
+    font-size: 3em;
+    flex-shrink: 2;
+ }
+
+
+ body{
+     background: #a58d6f;
+     border: 1px solid #2b251ca6;
+ }
+ #description{
+    border: 1px solid #2b251ca6;
+    border-radius: 3px;
+    padding: 2% 2%;
+ }
+ #mainContainer{
+    background: #c1baa0;
+    color: #2b251c;
+    font-family: 'Cabin', sans-serif;
+    border-radius: 3px;
+
+    padding: 1% 10%;
+    margin:1vw 10vw;
+    font-size: 1.23em;
+ }
+ @media screen and
+     (max-width: 1100px)
+     {
+     #title{
+        font-size: 2em;
+     }
+
+ }
+ @media screen and (max-width: 700px)
+     {
+     #title{
+        font-size: 1em;
+     }
+ }
+
+.textInput{
+    border: 1px solid #2b251ca6;
+    border-radius: 3px;
+    width: 20vw;
+    height: 3vh;
+    margin: 2vh 1vw;
+
+}
+#dropdown{
+    height: 4vh;
+    margin: 2vh 1vw;
+    width: 10vw;
+    border-radius: 3px;
+
+}
+#additional-comments{
+    border-radius: 4px;
+    width: 40em;
+    height: 10em;
+    resize: vertical;
+}
+#submit{
+    background: #2b251c;
+    border-color: #a58d6f;
+    color:#c1baa0;
+    width: 15em;
+    height: 3em;
+    margin: 0% 25%;
+    font-family: 'Courier New', Courier, monospace;
+}
+ 
+</style>
+<header>
+    <div id="titleInset">
+        <h1 id="title">
+            <strong> GENERAL HAPPINESS SURVEY </strong>
+        </h1>
+    </div>
+
+</header>
+
+<body>
+    <div id="mainContainer">
+        <h2>Welcome</h2>
+        <p id="description">
+            Here at the Happiness Institue we pride ourselves in being at to forefront of happiness. But we can't stay
+            on top without your help. Please fill out
+            the following short survey to help us improve our already fantastic services.
+        </p>
+        <form id="survey-form">
+            <div id="nameInput">
+                <label id="name-label" for="name">*Name </label>
+                <input id="name" required type="text" placeholder="Name" class="textInput" />
+            </div>
+            <div id="emailInput">
+                <label id="email-label" for="email">*Email </label>
+                <input id="email" required type="email" placeholder="Enter email" class="textInput" />
+            </div>
+            <div id="ageInput">
+                <label id="number-label" for="number">*Age</label>
+                <input id="number" type="number" min="0" max="102" placeholder="Enter Age" />
+            </div>
+            <div id="happinessSelection">
+                <h2>
+                    <label id="dropdown-label" for="dropdown">
+                        Choose your current level of happiness<br>
+                    </label>
+                </h2>
+
+                <select id="dropdown">
+                    <option>Very Sad</option>
+                    <option>Very Lonely</option>
+                    <option>Very Confused</option>
+                    <option>Very Disappointing</option>
+                    <option>Very Low</option>
+                    <option>Very Absent</option>
+                    <option>Very Happy</option>
+                </select>
+            </div>
+            <div id="futureOptionHolder">
+                <h2> <label for="future"> Which option best describes your future?</label></h2>
+                <ul id="future" style="list-style: none" ;>
+                    <li>
+                        <label><input type="radio" value="1" name="futureOptions"> Bleak </label>
+                    </li>
+                    <li>
+                        <label><input type="radio" value="2" name="futureOptions"> Grim </label>
+                    </li>
+                    <li>
+                        <label><input type="radio" value="3" name="futureOptions"> Dark</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" value="4" name="futureOptions"> Dismal </label>
+                    </li>
+                    <li>
+                        <label><input type="radio" value="5" name="futureOptions"> Exciting!!! </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2> <label for="checkbox-group"> Select All the things you don't have</label></h2>
+                <ul id="checkbox-group" style="list-style:none" ;>
+                    <li>
+                        <label> <input type="checkbox" value="1"> Friends </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" value="2"> Money </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" value="3"> Self-Respect </label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" value="4"> Intellect</label>
+                    </li>
+                    <li>
+                        <label> <input type="checkbox" value="5"> Problems</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="additional-commentHolder">
+
+                <h2>
+                    <label>Anything Else You Want to Add?</label>
+                </h2>
+                <textarea id="additional-comments" placeholder="Enter Comments Here">
+                    
+                </textarea>
+            </div>
+            <div id="submit-container">
+                <input id="submit" type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>
