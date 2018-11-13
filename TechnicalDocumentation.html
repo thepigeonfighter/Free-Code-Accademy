@@ -1,0 +1,750 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Technical Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<style>
+    :root {
+        --nav-bg: #cccbcb;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+        position: fixed;
+        padding: 10px;
+        width: 20vw;
+        height: 100%;
+        background: var(--nav-bg);
+    }
+
+    nav {
+        padding: 2px;
+    }
+
+    .nav-link {
+        color: black;
+    }
+
+    li:hover {
+        padding: 2px;
+        border: 1px solid darkgrey;
+        background: #e0dfdf;
+    }
+
+    .main-section {
+        position: relative;
+        margin: 0px 25vw;
+        padding: 2px;
+    }
+
+    @media(max-width:600px) {
+        nav {
+            visibility: hidden;
+        }
+    }
+</style>
+<nav id="navbar">
+    <header>
+        <h2 style="text-align:center"> Contents</h2>
+    </header>
+    <ul>
+        <li>
+            <a href="#ABSTRACT" class="nav-link"> <em><strong>Abstract</strong></em></a>
+        </li>
+        <li>
+            <a href="#INTRODUCTION" class="nav-link"> <em><strong>Introduction</strong></em></a>
+        </li>
+        <li>
+                <a href="#MATERIALS_AND_METHOD" class="nav-link"> <em><strong>Materials and Method</strong></em></a>
+            </li>
+        <li>
+            <a href="#PROTEASE_EXPRESSION_AND_PURIFICATION" class="nav-link"> <em><strong>Protease Expression and
+                        Purification</strong></em></a>
+        </li>
+        <li>
+            <a href="#ACTIVITY_ASSAYS" class="nav-link"> <em><strong>Activity Assays</strong></em></a>
+        </li>
+        <li>
+            <a href="#RESULTS" class="nav-link"> <em><strong>Results</strong></em></a>
+        </li>
+        <li>
+            <a href="#SAMPLE_CODE" class="nav-link"> <em><strong>Sample Code</strong></em></a>
+        </li>
+        <li>
+            <a href="#REFERENCES" class="nav-link"> <em><strong>References</strong></em></a>
+        </li>
+
+    </ul>
+</nav>
+<header>
+    <hr>
+    <h1 style="text-align:center">
+        <strong>SHORT TECHNICAL REPORT</strong>
+    </h1>
+    <hr>
+</header>
+
+
+<body>
+    <main id="main-doc">
+        <section class="main-section" id="ABSTRACT">
+            <header style="text-align:center"><strong> ABSTRACT</strong> </header>
+            <p>
+                Tobacco etch virus NIa proteinase (NIa-
+                Pro) has become the enzyme of choice for removing
+                 tags and fusion domains from recombinant 
+                proteins in vitro. We have designed a
+                mutant NIa-Pro that resists autoproteolytic
+                inactivation and present an efficient method
+                for producing large amounts of this enzyme
+                that is highly pure, active, and stable over
+                time. Histidine-tagged forms of both wild-
+                type and mutant NIa-Pro were overexpressed
+                in
+            </p>
+            <p>
+                E. coli
+                under conditions in which greater
+                than 95% of the protease was in the insoluble
+                fraction after cell lysis. An inclusion body
+                preparation followed by denaturing purification over
+                 a single affinity column and protein
+                renaturation yields greater than 12.5 mg enzyme per liter 
+                of bacterial cell culture. NIa-
+                Pro purified according to this protocol has
+                been used for quantitative removal of fusion
+                domains from a variety of proteins prepared
+                for crystallization and biochemical analysis.
+            </p>
+        </section>
+        <section class="main-section" id="INTRODUCTION">
+            <header style="text-align:center"><strong> INTRODUCTION</strong> </header>
+            <p>
+                Advances in recombinant protein
+                technology over the past decade have
+                led to the routine use of affinity tags to
+                aid protein purification for applications
+                including protein engineering and structural biology. 
+                Proteases are frequently
+                used to remove these tags following purification,
+                 yielding native protein for
+                subsequent applications. Factor Xa,
+                commonly used for this purpose, is relatively
+                 inefficient, nonsequence specific,
+                and cannot be recombinantly expressed.
+                In contrast, tobacco etch virus NIa proteinase (NIa-Pro) 
+                recognizes a specific
+                heptapeptide sequence, E-X-X-Y-X-
+                Q
+                Ø
+            </p>
+            <p>
+                S/G, and is active under a wide range
+                of conditions and in the presence of various 
+                protease inhibitors (3,4,6,8,9).
+                In nature, NIa-Pro is the 27-kDa proteolytic
+                 portion of the 49-kDa NIa
+                polypeptide found as an aggregate with
+                the 54-kDa NIb polypeptide in nuclear
+                inclusion bodies in infected plant cells
+                (2,7). Purification of NIa-Pro in large
+                quantity has proved difficult because of
+                the limited solubility of the protein. Inclusion 
+                bodies purified from infected
+                plant tissue with subsequent separation
+                of the 49- and 54-kDa polypeptides did
+                not yield significant amounts of active
+                NIa-Pro (5,7). Native purification of a
+                histidine-tagged recombinant NIa-Pro
+                from
+                E. coli
+                similarly produced low
+                quantities of protease because the majority 
+                of the recombinant protein resides
+                in inclusion bodies (7). An additional
+                problem with NIa-Pro is that it contains
+                an internal self-cleavage site that, when
+                proteolyzed, produces a truncated pro
+                tease with significantly reduced activity
+                (7). Autoproteolysis during preparation
+                and long-term storage thus reduces the
+                yield of fully active protease.
+                To address these issues, a single
+                amino acid change that inhibits autoproteolysis 
+                without affecting substrate
+                cleavage activity, Ser219Asn (S219N),
+                was introduced at the self-cleavage site
+                within NIa-Pro. Furthermore, a protocol
+                was developed for the denaturing purification
+                 and efficient renaturation of ac
+                tive NIa-Pro from inclusion bodies in
+                E.coli. NIa-Pro purified using this protocol
+                has been utilized to process a variety
+                of fusion-tagged proteins that have been
+                subsequently used for biochemical and
+                crystallographic studies (1,10,11
+            </p>
+        </section>
+        <section class="main-section" id="MATERIALS_AND_METHOD">
+            <header style="text-align:center"><strong> MATERIALS AND METHOD</strong> </header>
+            <p>
+                A wild-type NIa-Pro gene was generated by
+                PCR using pTL-5495 (ATCC,
+                Manassas, VA, USA) as the template.
+                The 5¢primer 5TEVP1, 5¢CATCAGC
+                GGGCCATGGCTGAAAGCTTGTTTAAG-3¢, changes the N terminus of
+                NIa-Pro from the wild-type Gly-Glu-
+                Ser to Met-Ala-Glu-Ser and contains an
+                Nco
+                I restriction site for cloning. The 3
+                ¢primer 3TEV H1, 5¢-CTGATGCACG
+                GATCCTCATTAATGGTGATGGTGATGGTGCAATTGCGAGTAGATTC
+                ACTG-3¢, encodes a Leu-His6 tag and a
+                Bam
+                HI restriction site for cloning. The
+                mutant NIa-Pro gene was generated by
+                sequential PCRs. For the first reaction,
+                pTL-5495 was used as the template
+                with primers 5TEVP1 and TEVPSN,
+                GAGTTGAGTTGCTTCTTTGAC
+                TGGCTGAAAGGGTTCTTCAGGT
+                TTGTTCATGAAAACTT
+                TGTGGC-3
+                to introduce the S219N mutation at the
+                internal self-cleavage site. The resultant
+                PCR product mixture was used as the
+                template in a second PCR using the 5¢primer 5TEVP1
+                and the 3 ¢primer3TEVH1. PCR products were ligated
+                into the pET15b expression vector (Novagen, Madison, WI, USA)
+                using the Nco
+                I and BamHI sites transformed intoE. coli
+
+            </p>
+            <p>
+                (Life Technologies,
+                Rockville, MD, USA) competent cells,
+                and ampicillin-resistant colonies were
+                selected. The resulting plasmids, pTPWT
+                and pTPSN, encoding polypeptides
+                with molecular weights of 28.6
+                kDa, were sequenced for accuracy and
+                then transformed into BL21 (DE3) (Novagen)
+                competent cells for expression
+            </p>
+        </section>
+        <section class="main-section" id="PROTEASE_EXPRESSION_AND_PURIFICATION">
+            <header style="text-align:center"><strong> PROTEASE EXPRESSION AND
+                    PURIFICATION</strong> </header>
+            <p>
+                NIa-Pro was expressed in BL21
+                (DE3) cells grown at 37°C in Luria
+                Broth supplemented with 100mM ampicillin until cultures reached an absorbance
+                (600 nm) of approximately
+                1.0. Expression was induced by adding
+                400 mM isopropyl-b- D -thiogalactoside
+                (IPTG) followed by vigorous aeration
+                at 37°C for 4–5 h. Cell pellets from
+                each liter of culture were harvested by
+                centrifugation, resuspended in 25 mL
+                buffer containing 50 mM Tris-HCl, pH
+                8.0, and 300 mM NaCl, and stored at 80°C. Cell lysis and native purification
+                of NIa-Pro were performed as described (7)
+                using nickel affinity chromatography (Ni-NTA Superflow; Qiagen,
+            </p>
+            <p> Valencia, CA, USA), except 10%
+                glycerol, 300 mM NaCl, and 5 mM 2-
+                mercaptoethanol were included in all
+                buffers, and the Ni-NTA column was
+                washed with buffer containing 10 mM
+                imidizole and eluted with buffer containing
+                400 mM imidizole. For inclusion body purification, cell suspensions
+                were thawed in cool water, and the
+                buffer was adjusted to a final concentration
+                of 500mg/mL lysozyme (Sigma,
+                St. Louis, MO, USA), 200mg/mL
+                DNase I (Roche Molecular Biochemicals,
+                Indianapolis, IN, USA), 50m g/mLPMSF, 10mg/mL leupeptin (Roche
+                Molecular Biochemicals), 20 mM
+                MgSO4, and 2 mM CaCl2.
+                Cell suspensions were incubated for 30 min with
+                agitation at 4°C and then lysed by three
+                freeze-thaw cycles. TritonX-100 was
+                added to a final concentration of 1%,
+                and the samples were vortex mixed for
+                1 min. The inclusion bodies were recovered
+                by centrifugation for 20 min at
+                10000¥g. Pellets were stored at -80°C.
+                Chromatography under denaturing
+                conditions was performed at 4°C using
+                10 mL Ni-NTA Superflow resin for
+                each liter of cell culture. The column
+                was equilibrated with 10 column volumes (cv) equilibration buffer containing 6 M urea, 100 mM NaH
+                2PO4, and
+                10 mM Tris-HCl, pH 8.0. Inclusion
+                body pellets were resuspended in buffer
+                containing 6 M guanidine-HCl, 100
+                mM NaH 2PO4, and 10 mM Tris-HCl,
+                pH 8.0, and incubated in a 65°C bath to
+                dissolve the inclusion bodies. Samples
+                were centrifuged for 20 min at 1
+                5000¥ g, and the supernatant was loaded onto
+                the column by gravity flow. The
+                column was washed with 4 cv equilibration
+                buffer and then 6 cv wash buffer
+                containing 6 M urea, 100 mM NaH
+                2PO4, and 10 mM Tris-HCl, pH
+                6.3. To elute the protein, a buffer con
+                taining 6 M urea, 100 mM NaH
+                2 PO4 ,and 10 mM Tris-HCl, pH 4.5, was ap
+                plied to the column and one 0.3-cv
+                fraction was collected. Flow was
+                stopped for a 5-min incubation, then
+                was resumed, and four additional 1-cv
+                fractions were collected. Fractions con
+                taining NIa-Pro, as determined by
+                SDS-PAGE, were pooled, adjusted to
+                pH 8.5 with 10 N NaOH, and dialyzed
+                for 4–8 h into storage buffer containing
+                100 mM Tris-HCl, pH 8.5, 500 mM
+                NaCl, 50% glycerol, 5 mM dithiothre
+                itol (DTT), and 0.5 mM EDTA. The su
+                pernatant containing active renatured
+                NIa-Pro was separated from precipitat
+                ed NIa-Pro by centrifugation for 20
+                min at 15000¥g, and both were stored
+                at -80°C. The precipitated NIa-Pro was
+                redissolved in equilibration buffer and
+                dialyzed into fresh storage buffer to ob
+                tain additional pools of active protease.
+            </p>
+            <p>
+                NIa-Pro preparations were quanti
+                fied using the Bradford assay (Bio-Rad
+                Laboratories, Hercules, CA, USA) with
+                bovine serum albumin as the standard.
+                NIa-Pro from the native preparation
+                was not assayed for activity due to sig
+                nificant contamination with other pro
+                teins. The yield of active enzyme in
+                these samples was estimated to be less
+                than 10% of the total nickel affinity-pu
+                rified protein. For the denaturing prepa
+                ration, the active NIa-Pro yield is re
+                ported as milligrams of NIa-Pro
+                obtained from two cycles of renatura
+                tion as described
+            </p>
+        </section>
+        <section class="main-section" id="ACTIVITY_ASSAYS">
+            <header style="text-align:center"><strong> ACTIVITY ASSAYS</strong> </header>
+            <p>
+                A 17-kDa substrate with the sequence
+                I-E-G-R-P-A-A-E-N-L-Y-F-Q Ø G-M-G-D-V-L-S at the N terminus
+                contains both a factor Xa cleavage site
+                (underlined sequence with cleavage after R)
+                and a NIa-Pro cleavage site (bold
+                letters with cleavage at the arrow).
+                When cleaved with commercially
+                available TEV protease (Life Technologies), this substrate yields a 15-kDa
+                peptide. Factor Xa (43 kDa) and NIa-
+                Pro (28.6 kDa) cleavage activities were
+                compared in 30-
+                L reactions containing 250mM substrate, 2.33mM FactorXa
+                (New England Biolabs, Beverly,
+                MA, USA) or 0.86m M NIa-Pro,
+                and 20mM Tris-HCl,
+                pH 8.0, 200 mM NaCl,
+                and 2 mM CaCl2.
+                Reactions were incubated at 23°C for
+                6 h. Samples were analyzed
+                by electrophoresis in 15% SDS-
+                PAGE gels and stained with
+                CoomassieBlue. NIa-Pro activity was
+                assayed in 30-mL reactions containing
+                100, 250, or 500M substrate, 0.86
+
+            </p>
+            <p>
+                M NIa-Pro, and 50 mM Tris-HCl, pH
+                8.0, 1 mM DTT, and 0.5 mM EDTA.
+                Reactions were incubated at 30°C for 1
+                h. Samples were analyzed by electrophoresis
+                in 15% SDS-PAGE gels,
+                stained with Coomassie Blue, and the
+                resultant protein bands were quantified
+                using a gel documentation system
+                (Eastman Kodak, Rochester, NY,
+                USA). The net intensities of full-length
+                and cleaved substrate bands were used
+                to calculate a specific activity as picomoles
+                substrate cleaved per femptomole
+                NIa-Pro at each substrate concentration.
+                Self-cleavage activity was
+                assayed under the same buffer conditions
+                in 40-mL reactions containing 6.5 Ml NIa-Pro and incubated at 4°C,
+                20°C, and 80°C.After 0.5, 1, 2, and
+                5.5 weeks, samples were analyzed by
+                lectrophoresis in 15% SDS-PAGE
+                gels and quantitated as described
+                above. The net intensities of full-length
+                and truncated NIa-Pro bands were used
+                to calculate the percent NIa-Pro
+                cleaved at each time point.
+            </p>
+        </section>
+        <section class="main-section" id="RESULTS">
+            <header style="text-align:center"><strong> RESULTS</strong> </header>
+            <p>
+                Following induction of NIa-Pro expression in
+                E. coli
+                , native preparations
+                yield minimal quantities of the protease
+                (Figure 1, lane 4 and Table 1) (7). The
+                NIa-Pro detected in high quantity within
+                total cell lysate is concentrated in inclusion
+                bodies, suggesting that virtually
+                all of the enzyme is expressed as insoluble
+                aggregate (Figure 1, lanes 1–3). Expression
+                was explored at a variety of
+                temperatures ranging from 20°C to
+                37°C; even at low temperatures, which
+                generally favor the soluble expression
+                of proteins, the majority of the NIa-Pro
+                resided in the insoluble fraction. Nickel
+                affinity column purification under denaturing conditions enabled recovery of
+                significant amounts of NIa-Pro from
+                the insoluble fraction. Furthermore, this
+                material is of greater purity than that
+                produced under soluble conditions (Figure 1, lanes 4 and 5). In samples
+                containing 4.5g total protein, a single
+                contaminant (Figure 1, lanes 8 and 9,
+                arrow a) is detected in NIa-Pro from the
+                denaturing protocol, indicating greater
+                than 95% purity. NIa-Pro purified in
+                this way was renatured by dialysis to remove
+                urea, resulting in approximately
+                10 mg active wild-type (TPWT) and
+                S219N (TPSN) forms of the enzyme
+                per liter of cell culture (Table 1). A second
+                renaturation of the dialysis pellet
+                yielded additional active enzyme for a
+                total yield of greater than 12.5 mg renatured
+                active NIa-Pro per liter of cell culture (Table 2).
+                Approximately 30% of
+                the affinity-purified protein was renatured
+                after the first dialysis, and a total
+                of 40% was renatured after two dialysis
+                cycles (Table 2). The average concentration
+                of renatured preparations was
+                approximately 1.0 mg/mL with a maximum
+                solubility of 1.5 mg/mL (data not
+                shown).
+            </p>
+            <p>
+                Average concentrations of
+                samples dialyzed directly out of elution
+                buffer at pH 4.5 were approximately 0.3
+                mg/mL (data not shown), indicating
+                that adjusting to pH 8.0–8.5 is critical
+                for efficient refolding.
+                Substrate cleavage by NIa-Pro produces
+                a single product, whereas factor
+                Xa proteolysis yields the desired polypeptide
+                plus two additional degradation
+                products (Figure 2). There also appears
+                to be more unreacted substrate remaining
+                after incubation with factor Xa than
+                with NIa-Pro, despite the use of almost
+                three times as much enzyme in the factor
+                Xa reaction. TPWT and TPSN have
+                specific activities similar to each other
+                and to the commercially available NIa-
+                Pro at all substrate concentrations tested
+                (Figure 3), demonstrating that refolding
+                does not compromise enzyme activity.
+                Full activity is also further evidence of
+                the purity of these preparations.
+                Both the commercially available
+                NIa-Pro and purified TPWT contain
+                significantly more truncated enzyme
+                than TPSN in the final preparation
+                (Figure 1, lanes 7–9, arrows b and c).
+                To assess self-cleavage activity, we utilized
+                a C-terminal histidine tag to bind
+                only full-length peptide to the Ni-NTA
+                column. Final TPWT preparations concentain
+                approximately 20% truncated peptide (Figure 4A,t= 0) indicating self-
+                cleavage activity during protease
+                renaturation at 4°C. Self-cleavage continues
+                during enzyme storage at 4°C or
+                -20°C (Figure 4, A and B), potentially
+                reducing the proportion of fully active
+                enzyme in a NIa-Pro stock over time.
+                The self-cleavage activity of TPWT is
+                similar to that of the control protease at
+                4°C and -20°C. In contrast, TPSN exhibits
+                reduced self-cleavage activity at
+                4°C and none at -20°C (Figure 4, A and
+                B). None of the NIa-Pro samples tested
+                exhibited significant self-proteolysis at 80°C
+                during our 5.5-week study (data
+                not shown)
+                protease for the heptapeptide sequence
+                E-X-X-Y-X-QØS/G
+                and its activity in
+                the presence of protease inhibitors and
+                under a wide range of conditions make
+                NIa-Pro an ideal tool for quantitative
+                removal of fusion tags from recombinant proteins.
+            </p>
+            <p>
+                We have shown that E.coli
+                strains transformed with wild-type,
+                as well as mutant, histidine-tagged NIa-
+                Pro constructs can be induced to express
+                greater than 95% of the protease
+                in inclusion bodies (Table 1 and Figure
+                1). This property was exploited to produce
+                milligram quantities of NIa-Pro
+                using an efficient purification and renaturation
+                protocol. A single denaturing affinity
+                column purification of the
+                NIa-Pro inclusion bodies, followed by
+                renaturation of the purified enzyme
+                yields 10 times as much active NIa-Pro
+                as the soluble preparation (7), allowing
+                greater than 12.5 mg stock preparations
+                of greater than 95% pure active NIa-
+                Pro to be prepared per liter of cell culture
+                (Table 2). Improved yields and the
+                ability to denature and renature NIa-
+                Pro without the loss of activity, as
+                shown by comparison to a commercially
+                available NIa-Pro, might also be exploited
+                for crystallographic and biochemical
+                analysis of this protease.
+                Within the NIa-Pro self-cleavag
+                site, G-H-K-V-F-M Ø
+                S, Ser219 is the
+                only amino acid matching the consensus
+                substrate cleavage site (7). The
+                S219N mutation in TPSN significantly
+                inhibits self-cleavage activity (Figure 3,
+                A and B), allowing for increased yields
+                of full-length NIa-Pro. It also permits
+                long-term storage (at least six weeks)
+                of NIa-Pro stocks at -20°C and short-
+                term storage (up to six weeks) at 4°C
+                without significant autoproteolysis.
+            </p>
+            <p>
+                mechanism of self-cleavage was
+                not studied, but a S219A mutant exhibited
+                wild-type levels of self-cleavage
+                activity (data not shown). Parks et al.
+                (7) reported significantly less substrate
+                cleavage activity of the truncated form
+                of NIa-Pro compared to the full-length
+                enzyme. We found comparable specific
+                activities for both wild-type and mutant
+                NIa-Pro with our substrate despite the
+                fraction of truncated polypeptide present
+                in the control and wild-type samples (Figure 2).
+                This effect may be concentration or substrate
+                dependent, and activity with other
+                substrates is currently under investigation.
+                The significantly greater specificity
+                of NIa-Pro over factor Xa makes this
+                protease a superior tool for many protein applications. Development of a
+                rapid and efficient protocol for the ex
+            </p>
+        </section>
+        <section class="main-section" id="SAMPLE_CODE">
+            <header style="text-align:center"><strong> SAMPLE CODE</strong> </header>
+            The File Request Manager has the following Methods.
+            <ol>
+                <li>
+                    <code>
+                                public EventHandler OnDeletionCompleted;
+                        </code>
+                </li>
+                <li>
+                    <code>
+                                    public void RegisterRequest(FileRequest request)
+                            </code>
+                </li>
+                <li>
+
+                    <code>
+                                public FileRequest RequestFileRead(FileRequest request)
+                        </code>
+                </li>
+                <li>
+                    <code>
+                                    private void HandleRequest(FileRequest request)
+                            </code>
+                </li>
+                <li>
+                    <code>
+                                    private void HandleCopy(FileRequest request)
+                            </code>
+                </li>
+                <li>
+                    <code>
+                                    private async Task HandleDeletions(FileRequest request)
+                            </code>
+                </li>
+                <li>
+                    <code>
+                                    private bool IsFileLocked(FileInfo file)
+                            </code>
+                </li>
+                <li>
+                    <code>
+                                    private void HandleWrites(FileRequest request)
+                            </code>
+                </li>
+                <li>
+                    <code>
+                                    public void DeleteAllFiles()
+                            </code>
+                </li>
+
+
+            </ol>
+        </section>
+        <section class="main-section" id="REFERENCES">
+            <header style="text-align:center"><strong> REFERENCES</strong> </header>
+            <ol>
+                <li>
+                    Batey, R.T., R.P. Rambo, L. Lucast, B. Rha,
+                    and J.A. Doudna.
+                    2000. Crystal structure of
+                    the ribonucleoprotein core of the signal recog
+                    -
+                    nition particle. Science
+                    287
+                    :1232-1239
+                </li>
+                <li>
+                    Carrington, J.C. and W.G. Dougherty.
+                    1988. A viral cleavage site cassette: identifica
+                    -
+                    tion of amino acid sequences required for to
+                    -
+                    bacco etch virus polyprotein processing. Proc.
+                    Natl. Acad. Sci. USA
+                    85
+                    :3391-3395
+                </li>
+                <li>
+                    .
+                    Dougherty, W.G., J.C. Carrington, S.M.
+                    Cary, and T.D. Parks.
+                    1988. Biochemical
+                    and mutational analysis of a plant virus poly
+                    -
+                    protein cleavage site. EMBO J.
+                    7
+                    :1281-1287
+                </li>
+                <li>
+                    , W.G., S.M. Cary, and T.D.
+                    Parks.
+                    1989. Molecular genetic analysis of a
+                    plant virus polyprotein cleavage site: a model.
+                    Virology
+                    171
+                    :356-364
+                </li>
+                <li>
+                    .
+                    Dougherty, W.G. and E. Hiebert.
+                    1980.
+                    Translation of potyvirus RNA in a rabbit retic
+                    -
+                    ulocyte lysate: identification of nuclear inclu
+                    -
+                    sion proteins as products of tobacco etch virus
+                    RNA translation and cylindrical inclusion pro
+                    -
+                    tein as a product of the potyvirus genome. Vi
+                    -
+                    rology
+                    104
+                    :174-18
+                </li>
+                <li>
+                    Dougherty, W.G. and T.D. Parks.
+                    1989.
+                    Molecular genetic and biochemical evidence
+                    for the involvement of the heptapeptide cleav
+                    -
+                    age sequence in determining the reaction pro
+                    -
+                    file at two tobacco etch virus cleavage sites in
+                    cell-free assays. Virology
+                    172
+                    :145-155
+                </li>
+                <li>
+                    Wang, C.R., L. Esser, C.S. Smagula, T.C.
+                    Sudhof, and J. Deisenhofer.
+                    1997. Identifica
+                    -
+                    tion, expression, and crystallization of the pro
+                    -
+                    tease-resistant conserved domain of synapsin
+                    I. Protein Sci.
+                    6
+                    :2264-2267
+                </li>
+                <li>
+                    .
+                    Parks, T.D., K.K. Leuther, E.D. Howard,
+                    S.A. Johnston, and W.G. Dougherty.
+                    1994.
+                    Release of proteins and peptides from fusion
+                    proteins using a recombinant plant virus pro
+                    -
+                    teinase. Anal. Biochem.
+                    216
+                    :413-417
+                </li>
+                <li>
+                    Polayes, D.A., A. Goldstein, G. Ward, and
+                    A.J.J. Hughes.
+                    1994. TEV protease, recombi
+                    -
+                    nant: a site-specific protease for efficient cleavage of affinity tags from expressed pro
+                    -
+                    teins. Focus
+                    16
+                    :2-5
+                </li>
+                <li>
+                    Purdy, M.D. and M.C. Wiener.
+                    2000. Ex
+                    -
+                    pression, purification, and initial structural
+                    characterization of YadQ, a bacterial homolog
+                    of mammalian ClC chloride channel proteins.
+                    FEBS Lett.
+                    466
+                    :26-2
+                </li>
+            </ol>
+        </section>
+
+    </main>
+</body>
+
+</html>
