@@ -1,0 +1,400 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<style>
+    :root {
+        --main-bg-color: #2f2f31;
+        --main-font-color: #2f2f31;
+        --header-color: #8c92a2e7;
+        --nav-color: #5967849d;
+        --light-accent: #e1e1e1;
+    }
+
+    body {
+        background: var(--light-accent);
+        font-family: 'Fjalla One', sans-serif;
+        color: #2f2f31;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 2em;
+
+    }
+
+    #header {
+        display: grid;
+        grid-template-columns: 10% 1fr  1fr;
+        grid-template-rows: 5vmax;
+        text-align: left;
+        position: fixed;
+        width: 100vw;
+        justify-content: space-between;
+        background: var(--header-color);
+        font-family: 'Fjalla One', sans-serif;
+        color: var(--main-font-color);
+    }
+
+    #header-img {
+        mix-blend-mode: multiply;
+        height: 5vmax;
+    }
+    #nav-icons{
+        
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        
+        margin-top: 0px;
+    }
+
+    p {
+        padding: 2% 10%;
+        font-size: 1em;
+    }
+
+    .dividers {
+        background: var(--main-bg-color);
+        color: var(--light-accent);
+        padding: 2%;
+    }
+
+    .nav-link {
+        color: var(--main-font-color);
+    }
+
+    #pricing {
+
+        background: var(--main-bg-color);
+    }
+
+    #safety {
+        background: var(--light-accent);
+        padding: 0% 10%;
+    }
+
+    #about-us {
+        padding: 10% 10%;
+        background: var(--light-accent);
+    }
+
+
+    .list-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10%;
+    }
+
+    #pricing-list {
+        list-style-type: none;
+        display: flex;
+        padding: 5% 10%;
+        justify-content: space-evenly;
+        background: var(--header-color);
+
+    }
+
+
+    .perk-list-Items {
+        margin: 1em 0px;
+        
+        
+    }
+    .missed-perks {
+        margin: 1em 0px;
+        text-decoration: line-through;
+        color:#6b6b6e;
+    }
+
+    .pricing-tabs { 
+        padding: 2vw 5vw;
+        width: 10vw;
+        background: var(--light-accent);
+        font-size: 1em;
+
+    }
+    .buy-now-button{
+        width: 8vw;
+        height: 2vw;
+        font-family: 'Fjalla One', sans-serif;
+        border-radius: 5px;
+        background: var(--main-bg-color);
+        color: var(--light-accent);
+    }
+    .small-img
+    {
+        width: 20vw;
+    }
+    @media(max-width:800px)
+        {
+        #pricing-list{
+            display: list-item;
+            padding: 5% 20%;
+        }
+        .pricing-tabs{
+            
+            width: 60vw;
+        }
+        .buy-now-button{
+            width: 25vw;
+            height: 7vw;
+        }
+        #header{
+            grid-template-columns: 15% 1fr  3fr;
+        }
+        }
+    @media(max-height:300px)
+    {
+        #header{
+            grid-template-columns: 10% 1fr  3fr;
+        }
+        h1{
+            font-size: 2vw;
+        }
+    }
+        
+</style>
+<header id="header">
+    <div>
+        <img id="header-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZxGfIZRAWWnftUoVoKyP7VmLvrqgE3E9ud5j5spqFbCIZoEJ">
+    </div>
+    <div>
+        <h1>
+            Monkey Acquisition Ltd
+        </h1>
+
+    </div>
+
+
+    <nav id="nav-bar">
+        <ul id="nav-icons">
+            <li >
+                <h3><a class="nav-link" href="#pricing">Pricing</a></h3>
+            </li>
+            <li >
+                <h3><a class="nav-link" href="#about-us">About Us</a></h3>
+            </li>
+            <li>
+                <h3> <a class="nav-link" href="#safety">Safety</a></h3>
+            </li>
+        </ul>
+
+
+
+    </nav>
+</header>
+
+
+<body>
+    <div id="about-us">
+        <h2 class="dividers"> About Us</h2>
+        <p>We are a highly trained group skilled in the art of capture and extraction of hi-value monkey targets. My
+            brother
+            Anatoly and I have caught monkeys on six of the seven countinents. The two of us lead squads of 6 highly
+            qualifed monkey aquisition agents.
+            One mission. One Monkey.
+        </p>
+        <label for="methods" style="text-align:center">
+            <h2 class="dividers">Our M.O</h2>
+        </label>
+        <ul id="methods" style="list-style: none">
+            <li class="list-item">
+                <img id="track-img" src="https://cdn1.iconfinder.com/data/icons/pixel-perfect-at-16px-volume-3/16/2047-512.png"
+                    class="small-img" alt="">
+                <label></label>
+                <label for="track-img">
+                    <h3>We track the Target</h3>
+                </label>
+            </li>
+            <li class="list-item">
+                <img id="eye-img" style="mix-blend-mode: multiply" src="https://image.freepik.com/free-icon/surveillance-eye-symbol_318-52486.jpg"
+                    class="small-img" alt="">
+                <label></label>
+                <label for="track-img">
+                    <h3>Initiate Surviellance</h3>
+                </label>
+            </li>
+            <li class="list-item">
+                <img id="eye-img" style="mix-blend-mode: multiply" src="http://cdn.onlinewebfonts.com/svg/img_468579.png"
+                    class="small-img" alt="">
+                <label></label>
+                <label for="track-img">
+                    <h3>Capture the Asset</h3>
+                </label>
+            </li>
+
+        </ul>
+    </div>
+    <div id="safety">
+        <h2 class="dividers">How We Stay Safe</h2>
+        <p>In the ever changing world of monkey capture and extradition it is
+            all to easy to get left behind. When that happens you are setting
+            you and you're team up for failure. Watch this short video on some of
+            the intrinsic dangers we face daily.
+        </p>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/GhxqIITtTtU" frameborder="0"
+            allow="accelerometer; 
+         autoplay; encrypted-media; gyroscope; 
+         picture-in-picture"
+            allowfullscreen></iframe>
+        <p>As you can see staying safe is no small task. We accomplish this challenge with never-before seen
+            tools and equipment that keeps us one step ahead of our simian friends.
+        </p>
+    </div>
+    <div id="pricing">
+        <h2 class="dividers">Pricing</h2>
+        <ul id="pricing-list">
+            <li class="pricing-tabs">
+                <h3 class="dividers"> The Value Package </h3>
+                <ul style="text-align:left">
+                    <li class="perk-list-Items">
+                        A Guaranteed Capture
+                    </li>
+                    <li class="perk-list-Items">
+                        Target in Good Condition
+                    </li>
+                    <li class="perk-list-Items">
+                        A Well Behaved Monkey
+                    </li>
+                    <li class="perk-list-Items">
+                        Photo-Opp with the Squad
+                    </li>
+                    <li class="missed-perks">
+                        You Get to Choose the Target
+                    </li>
+                    <li class="missed-perks">
+                        You Take Part in the Capture
+                    </li>
+                    <li class="missed-perks">
+                        You Get to Set the trap
+                    </li>
+                    <li class="missed-perks">
+                        We Provide a Place to Sleep
+                    </li>
+                    <li class="missed-perks">
+                        We Will Smuggle You Out of Country
+                    </li>
+                    <li class="missed-perks">
+                        Guaranteed Taxidermy upon Request
+                    </li>
+
+                </ul>
+                <div>
+                    <label for="value">$2700<br></label>
+                    <input id="value" class="buy-now-button" type="button" value="Buy Now!">
+                </div>
+            </li>
+            <li class="pricing-tabs">
+                <h3 class="dividers"> The Extra Package </h3>
+                <ul style="text-align:left">
+                    <li class="perk-list-Items">
+                        A Guaranteed Capture
+                    </li>
+                    <li class="perk-list-Items">
+                        Target in Good Condition
+                    </li>
+                    <li class="perk-list-Items">
+                        A Well Behaved Monkey
+                    </li>
+                    <li class="perk-list-Items">
+                        Photo-Opp with the Squad
+                    </li>
+                    <li class="perk-list-Items">
+                        You Get to Choose the Target
+                    </li>
+                    <li class="perk-list-Items">
+                        You Take Part in the Capture
+                    </li>
+                    <li class="missed-perks">
+                        You Get to Set the trap
+                    </li>
+                    <li class="missed-perks">
+                        We Provide a Place to Sleep
+                    </li>
+                    <li class="missed-perks">
+                        We Will Smuggle You Out of Country
+                    </li>
+                    <li class="missed-perks">
+                        Guaranteed Taxidermy upon Request
+                    </li>
+
+                </ul>
+                <div>
+                    <label for="value">$5200<br></label>
+                    <input id="value" class="buy-now-button" type="button" value="Buy Now!">
+                </div>
+            </li>
+            <li class="pricing-tabs">
+                <h3 class="dividers"> The Elite Package </h3>
+                <ul style="text-align:left">
+                    <li class="perk-list-Items">
+                        A Guaranteed Capture
+                    </li>
+                    <li class="perk-list-Items">
+                        Target in Good Condition
+                    </li>
+                    <li class="perk-list-Items">
+                        A Well Behaved Monkey
+                    </li>
+                    <li class="perk-list-Items">
+                        Photo-Opp with the Squad
+                    </li>
+                    <li class="perk-list-Items">
+                        You Get to Choose the Target
+                    </li>
+                    <li class="perk-list-Items">
+                        You Take Part in the Capture
+                    </li>
+                    <li class="perk-list-Items">
+                        You Get to Set the trap
+                    </li>
+                    <li class="perk-list-Items">
+                        We Provide a Place to Sleep
+                    </li>
+                    <li class="perk-list-Items">
+                        We Will Smuggle You Out of Country
+                    </li>
+                    <li class="perk-list-Items">
+                        Guaranteed Taxidermy upon Request
+                    </li>
+
+                </ul>
+                <div>
+                    <label for="value">$10,000<br></label>
+                    <input id="value" class="buy-now-button" type="button" value="Buy Now!">
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div>
+        <h2 class="dividers">
+            Questions or Complaints?
+        </h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" target="_blank">
+            <label for="email">Let us know who you are</label>
+            <input name="email" required type="email" id="email" placeholder="enter your email">
+            <label for="email-text"><br>What would you like to say?</label><br>
+            <textarea placeholder="Enter Thoughts Here" cols="60" rows="5"></textarea><br>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
