@@ -1,0 +1,102 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>George Fabish's Porfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<style>
+    :root {
+        --main-bg: #e7e2b0;
+        --navbar-bg: #d3d0985e;
+        --projects-bg:#aabcbf;
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+    }
+
+    body {
+        background: var(--main-bg);
+    }
+
+    #navbar {
+        position: fixed;
+        background: var(--navbar-bg);
+        width: 100%;
+        left: 0px;
+        top: 0px;
+    }
+
+    #welcome-section {
+        margin-top: 40vh;
+        height: 100vh;
+        justify-content: center;
+
+    }
+
+    #navbar ul {
+        text-align: right;
+        list-style: none;
+
+
+    }
+
+    #navbar ul li {
+        padding: 1%;
+        display: inline-block;
+    }
+    #projects{
+        background: var(--projects-bg);
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+</style>
+<nav id="navbar">
+    <ul>
+        <li>
+            About Me
+        </li>
+        <li>
+            Projects
+        </li>
+        <li>
+            Contact
+        </li>
+    </ul>
+</nav>
+<body>
+    <div id="welcome-section">
+        <h1>
+            Hi there,
+            My Name is George
+        </h1>
+        <h2>I am a .NET developer</h2>
+    </div>
+    <section id="projects">
+        <header><h2>These are some things that I have been working on</h2></header>
+        <ul>
+            <li>
+                Connect Four
+            </li>
+            <li>
+                Automated Desktop Background
+            </li>
+            <li>
+                Free Code Accademy Challenges
+            </li>
+        </ul>
+    </section>
+
+
+
+
+</body>
+
+</html>
